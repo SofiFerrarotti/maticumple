@@ -41,13 +41,13 @@
     <h1>Hola amigo, soy Sonic</h1>
     <img src="https://media.tenor.com/2ArHgi5S2bQAAAAi/sonic-dance.gif" alt="Sonic saludando">
     <p>Estoy aqui para informarte que los dos regalos más importantes están en viaje, vas a tener que esperar unos días.</p>
-    <button onclick="mostrarRegalos()">Ver los regalos</button>
+    <button onclick="toggleElemento('regalos')">Ver/Esconder los regalos</button>
     <div id="regalos" class="hidden">
         <img src="regalo1.jpg" alt="Regalo 1">
         <img src="regalo2.jpg" alt="Regalo 2">
     </div>
     <br>
-    <button onclick="mostrarSorpresa()">Ver sorpresa final</button>
+    <button onclick="toggleElemento('sorpresa')">Ver/Esconder sorpresa final</button>
     <div id="sorpresa" class="hidden">
         <img src="https://media1.tenor.com/m/5g82QDKwGsUAAAAd/stugma.gif" alt="Sonic feliz">
         <p>¡Feliz cumpleaños, mi amor, te amo♥!</p>
@@ -56,12 +56,9 @@
     </div>
 
     <script>
-        function mostrarRegalos() {
-            document.getElementById('regalos').classList.remove('hidden');
-        }
-
-        function mostrarSorpresa() {
-            document.getElementById('sorpresa').classList.remove('hidden');
+        function toggleElemento(id) {
+            const elemento = document.getElementById(id);
+            elemento.classList.toggle('hidden');
         }
     </script>
 </body>
